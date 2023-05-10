@@ -1,0 +1,78 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "test1",
+            "name" : "test1",
+            "email": "test@test.test",
+            "password": "123",
+            "avatar": "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
+        },
+        {
+            "id": 2,
+            "username": "test2",
+            "name" : "test2",
+            "email": "tes2t@tes2t.te2st",
+            "password": "123",
+            "avatar": "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
+        },
+        {
+            "id": 3,
+            "username": "test3",
+            "name" : "test3",
+            "email": "tes3t@tes3t.te3st",
+            "password": "123",
+            "avatar": "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
+        }
+    ],
+    "movies": [
+        {
+            "id": 1,
+            "title": "Ring of Power",
+            "description": "The Ring of Power is a 1992 documentary film written and directed by Amenstop Productions. It is the first part of a two-part series detailing the use of occultic practices and symbols in Hollywood, the music industry, and modern society. The film begins with a warning that the film may be disturbing to some viewers, especially those under the age of 18. The film is narrated by the Christian minister Texe Marrs, who is also the author of the book of the same name. ",
+            "image": "https://i0.wp.com/www.artofvfx.com/wp-content/uploads/2022/08/lord_of_the_rings_the_rings_of_power_ver52_xlg.jpg?ssl=1",
+            "likes": 3,
+            "comments": 5,
+            "views": 10,
+            "imdb": 8.5,
+            "url": "rings-of-power"
+        },
+        {
+            "id": 2,
+            "title": "Pablo Escobar Lost Paradise",
+            "description": "Pablo Escobar: Lost Paradise is a 2022 American biographical crime film directed by Andrea Di Stefano and written by Di Stefano and Rowan Joffé. The film stars Javier Bardem as Pablo Escobar, with Penélope Cruz, Peter Sarsgaard, Julieth Restrepo, Óscar Jaenada, and Wagner Moura in supporting roles. The film is loosely based on the book Loving Pablo, Hating Escobar by Colombian journalist Virginia Vallejo, Escobar's mistress from 1983 to 1987, and on Vallejo's 2007 memoir Amando a Pablo, odiando a Escobar. ",
+            "image": "https://m.media-amazon.com/images/M/MV5BNTUzMDQ0MzA4OV5BMl5BanBnXkFtZTgwNDY3OTc2MjE@._V1_FMjpg_UX1000_.jpg",
+            "likes": 3,
+            "comments": 5,
+            "views": 10,
+            "imdb": 8.5,
+            "url": "rings-of-power"
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Action"
+        },
+        {
+            "id": 2,
+            "name": "Comedy"
+        },
+        {
+            "id": 3,
+            "name": "Drama"
+        },
+        {
+            "id": 4,
+            "name": "Horror"
+        },
+        {
+            "id": 5,
+            "name": "Romance"
+        },
+        {
+            "id": 6,
+            "name": "Sci-Fi"
+        }
+    ]
+}
