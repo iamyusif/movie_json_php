@@ -1,6 +1,7 @@
 <?php
 foreach (getData()["movies"] as $movie):
     ?>
+    <?php if($movie["active"]): ?>
     <div class="card mb-3">
         <div class="row">
             <div class="col-3">
@@ -38,30 +39,11 @@ foreach (getData()["movies"] as $movie):
                             ?>
                         </span>
 
-                        <span class="badge bg-primary m-1">
-                            <?php
-                            if ($movie["views"] > 1) {
-                                echo $movie["views"] . " views";
-                            } else {
-                                echo "";
 
-                            }
-                            ?>
-                        </span>
-                        <span class="badge bg-primary m-1">
-                            <?php
-                            if ($movie["imdb"] > 1) {
-                                echo $movie["imdb"] . " imdb";
-                            } else {
-                                echo "";
-
-                            }
-                            ?>
-                        </span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+<?php endif; ?>
 <?php endforeach; ?>

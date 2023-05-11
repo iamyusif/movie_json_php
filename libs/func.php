@@ -32,6 +32,7 @@ function createUser(string $name, string $email, string $username, string $passw
         "email" => $email,
         "username" => $username,
         "password" => $password,
+        "role" => "user"
     ];
 
     $data = getData();
@@ -45,7 +46,7 @@ function createUser(string $name, string $email, string $username, string $passw
 }
 
 
-function createNewMovie(string $title, string $description, string $image, string $url, int $likes = 3, int $comments = 3, int $views = 3, int $imdb = 3) // create movie in db.json file
+function createNewMovie(string $title, string $description, string $image, string $url,int $views = 3, int $imdb = 3) // create movie in db.json file
 {
     $movies = getData()["movies"];
     $movies[] = [
@@ -54,10 +55,9 @@ function createNewMovie(string $title, string $description, string $image, strin
         "description" => $description,
         "image" => $image,
         "url" => $url,
-        "likes" => $likes,
-        "comments" => $comments,
         "views" => $views,
         "imdb" => $imdb,
+        "active" => false
     ];
 
     $data = getData();

@@ -24,9 +24,6 @@ if (!empty($_GET['q'])) {
       <li class="nav-item">
         <a class="nav-link" href="create.php">Add Movie</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">test</a>
-      </li>
     </ul>
 
     <ul class="navbar-nav ml-auto">
@@ -39,6 +36,9 @@ if (!empty($_GET['q'])) {
             <?php echo $_COOKIE["auth"]["username"]; ?>
           </a>
         </li>
+
+    
+
 
       <?php else: ?>
 
