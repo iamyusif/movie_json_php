@@ -20,14 +20,12 @@ if (!empty($_GET['q'])) {
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="create.php">Add Movie</a>
-      </li>
-    </ul>
-
     <ul class="navbar-nav ml-auto">
       <?php if (isset($_COOKIE["auth"])): ?>
+        <li class="nav-item">
+          <a class="nav-link" href="create.php">Add Movie</a>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="logout.php">Logout</a>
         </li>
@@ -37,8 +35,11 @@ if (!empty($_GET['q'])) {
           </a>
         </li>
 
-    
-
+        <?php if (getUSer($_COOKIE["auth"]["username"])["role"] == "admin"): ?>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.php">Admin</a>
+          </li>
+        <?php endif; ?>
 
       <?php else: ?>
 
@@ -49,6 +50,10 @@ if (!empty($_GET['q'])) {
           <a class="nav-link" href="register.php">Register</a>
 
         <?php endif; ?>
+
+
+      </li>
+
 
     </ul>
 

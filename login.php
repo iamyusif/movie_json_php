@@ -17,6 +17,7 @@ if (isset($_POST["login"])) {
         setcookie("auth[username]", $user["username"], time() + (60 * 60)); // auth yazma sebebimiz cookie
         setcookie("auth[name]", $user["name"], time() + (60 * 60));
 
+      
         header("Location: index.php");
     } else {
         echo '<div class="alert alert-danger text-center" role="alert">
