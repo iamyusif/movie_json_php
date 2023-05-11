@@ -23,5 +23,50 @@ function getUSer(string $username) // get user from db.json file
     return null;
 }
 
+function createUser(string $name, string $email, string $username, string $password) // create user in db.json file 
+{
+    $users = getData()["users"];
+    $users[] = [
+        "id" => count($users) + 1,
+        "name" => $name,
+        "email" => $email,
+        "username" => $username,
+        "password" => $password,
+    ];
+
+    $data = getData();
+    $data["users"] = $users;
+
+    $myFile = fopen("db.json", "w") or die("Unable to open file!");
+    fwrite($myFile, json_encode($data, JSON_PRETTY_PRINT));
+    fclose($myFile);
+
+
+}
+
+
+function createNewMovie(string $title, string $description, string $image, string $url, int $likes = 3, int $comments = 3, int $views = 3, int $imdb = 3) // create movie in db.json file
+{
+    $movies = getData()["movies"];
+    $movies[] = [
+        "id" => count($movies) + 1,
+        "title" => $title,
+        "description" => $description,
+        "image" => $image,
+        "url" => $url,
+        "likes" => $likes,
+        "comments" => $comments,
+        "views" => $views,
+        "imdb" => $imdb,
+    ];
+
+    $data = getData();
+    $data["movies"] = $movies;
+
+    $myFile = fopen("db.json", "w") or die("Unable to open file!");
+    fwrite($myFile, json_encode($data, JSON_PRETTY_PRINT));
+    fclose($myFile);
+
+}
 
 ?>

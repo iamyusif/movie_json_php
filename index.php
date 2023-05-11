@@ -6,16 +6,7 @@ require "libs/vars.php";
 
 require "libs/func.php";
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-   $title = $_POST["title"];
-   $description = $_POST["description"];
-   $image = $_POST["image"];
-   $links = $_POST["links"];
 
-
-   addNewMovie($movies, $title, $description, $image, 0, 0, 0, 0, $links);
-
-}
 
 ?>
 

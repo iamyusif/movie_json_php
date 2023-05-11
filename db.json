@@ -3,26 +3,37 @@
         {
             "id": 1,
             "username": "test1",
-            "name" : "test1",
+            "name": "test1",
             "email": "test@test.test",
-            "password": "123",
-            "avatar": "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
+            "password": "123"
         },
         {
             "id": 2,
             "username": "test2",
-            "name" : "test2",
+            "name": "test2",
             "email": "tes2t@tes2t.te2st",
-            "password": "123",
-            "avatar": "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
+            "password": "123"
         },
         {
             "id": 3,
             "username": "test3",
-            "name" : "test3",
+            "name": "test3",
             "email": "tes3t@tes3t.te3st",
-            "password": "123",
-            "avatar": "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
+            "password": "123"
+        },
+        {
+            "id": 4,
+            "name": "yox",
+            "email": "iamyusifhh@gmail.com",
+            "username": "admin",
+            "password": "123"
+        },
+        {
+            "id": 5,
+            "name": "yusif",
+            "email": "iamyusifh@gmail.com",
+            "username": "sad",
+            "password": "123"
         }
     ],
     "movies": [
@@ -30,7 +41,7 @@
             "id": 1,
             "title": "Ring of Power",
             "description": "The Ring of Power is a 1992 documentary film written and directed by Amenstop Productions. It is the first part of a two-part series detailing the use of occultic practices and symbols in Hollywood, the music industry, and modern society. The film begins with a warning that the film may be disturbing to some viewers, especially those under the age of 18. The film is narrated by the Christian minister Texe Marrs, who is also the author of the book of the same name. ",
-            "image": "https://i0.wp.com/www.artofvfx.com/wp-content/uploads/2022/08/lord_of_the_rings_the_rings_of_power_ver52_xlg.jpg?ssl=1",
+            "image": "https:\/\/i0.wp.com\/www.artofvfx.com\/wp-content\/uploads\/2022\/08\/lord_of_the_rings_the_rings_of_power_ver52_xlg.jpg?ssl=1",
             "likes": 3,
             "comments": 5,
             "views": 10,
@@ -40,13 +51,35 @@
         {
             "id": 2,
             "title": "Pablo Escobar Lost Paradise",
-            "description": "Pablo Escobar: Lost Paradise is a 2022 American biographical crime film directed by Andrea Di Stefano and written by Di Stefano and Rowan Joffé. The film stars Javier Bardem as Pablo Escobar, with Penélope Cruz, Peter Sarsgaard, Julieth Restrepo, Óscar Jaenada, and Wagner Moura in supporting roles. The film is loosely based on the book Loving Pablo, Hating Escobar by Colombian journalist Virginia Vallejo, Escobar's mistress from 1983 to 1987, and on Vallejo's 2007 memoir Amando a Pablo, odiando a Escobar. ",
-            "image": "https://m.media-amazon.com/images/M/MV5BNTUzMDQ0MzA4OV5BMl5BanBnXkFtZTgwNDY3OTc2MjE@._V1_FMjpg_UX1000_.jpg",
+            "description": "Pablo Escobar: Lost Paradise is a 2022 American biographical crime film directed by Andrea Di Stefano and written by Di Stefano and Rowan Joff\u00e9. The film stars Javier Bardem as Pablo Escobar, with Pen\u00e9lope Cruz, Peter Sarsgaard, Julieth Restrepo, \u00d3scar Jaenada, and Wagner Moura in supporting roles. The film is loosely based on the book Loving Pablo, Hating Escobar by Colombian journalist Virginia Vallejo, Escobar's mistress from 1983 to 1987, and on Vallejo's 2007 memoir Amando a Pablo, odiando a Escobar. ",
+            "image": "https:\/\/m.media-amazon.com\/images\/M\/MV5BNTUzMDQ0MzA4OV5BMl5BanBnXkFtZTgwNDY3OTc2MjE@._V1_FMjpg_UX1000_.jpg",
             "likes": 3,
             "comments": 5,
             "views": 10,
             "imdb": 8.5,
-            "url": "rings-of-power"
+            "url": "pablo-escobar-lost-paradise"
+        },
+        {
+            "id": 3,
+            "title": "The Menu",
+            "description": "A young couple travels to a remote island to eat at an exclusive restaurant where the chef has prepared a lavish menu, with some shocking surprises.",
+            "image": "https:\/\/avatars.mds.yandex.net\/get-kinopoisk-image\/6201401\/e46bbbf6-efd9-469e-8a39-1cb768e8b692\/300x450",
+            "url": "the-menu",
+            "likes": 45,
+            "comments": 9,
+            "views": 300,
+            "imdb": 7.2
+        },
+        {
+            "id": 4,
+            "title": "Ant-Man and the Wasp",
+            "description": "Scott Lang and Hope Van Dyne are dragged into the Quantum Realm, along with Hope's parents and Scott's daughter Cassie. Together they must find a way to escape, but what secrets is Hope's mother hiding? And who is the mysterious Kang?",
+            "image": "https:\/\/m.media-amazon.com\/images\/M\/MV5BODZhNzlmOGItMWUyYS00Y2Q5LWFlNzMtM2I2NDFkM2ZkYmE1XkEyXkFqcGdeQXVyMTU5OTA4NTIz._V1_FMjpg_UX1000_.jpg",
+            "url": "ant-man-wraps",
+            "likes": 3,
+            "comments": 3,
+            "views": 3,
+            "imdb": 3
         }
     ],
     "categories": [

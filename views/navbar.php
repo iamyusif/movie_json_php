@@ -22,13 +22,10 @@ if (!empty($_GET['q'])) {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Link1</a>
+        <a class="nav-link" href="create.php">Add Movie</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link2</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link3</a>
+        <a class="nav-link" href="#">test</a>
       </li>
     </ul>
 

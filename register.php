@@ -5,24 +5,36 @@ require "libs/func.php";
 require "views/_header.php";
 
 
-if (isset($_POST["login"])) {
+if (isset($_POST["register"])) {
 
     $username = $_POST["username"];
     $password = $_POST["password"];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+
+    if (empty($name) or empty($email) or empty($username) or empty($password)) {
+        echo '<div class="alert alert-danger text-center" role="alert">
+            Please fill all fields!
+          </div>';
+        return;
+
+    }
+
+    if (getUser($username)) {
+        echo '<div class="alert alert-danger text-center" role="alert">
+            User already exists!
+          </div>';
+        return;
+    }
+
+
+    createUser($name, $email, $username, $password);
 
     $user = getUser($username);
 
-    if (!is_null($user) and $username == $user["username"] and $password == $user["password"]) {
+    header("Location: login.php");
 
-        setcookie("auth[username]", $user["username"], time() + (60 * 60)); // auth yazma sebebimiz cookie
-        setcookie("auth[name]", $user["name"], time() + (60 * 60));
 
-        header("Location: index.php");
-    } else {
-        echo '<div class="alert alert-danger text-center" role="alert">
-            Username or password is wrong!
-          </div>';
-    }
 }
 
 ?>
@@ -34,24 +46,24 @@ if (isset($_POST["login"])) {
 
                 <div class="card-body">
 
-                    <form action="login.php" method="POST">
-                        
-                    <div class="mb-3">
-                            
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" class="form-control">
-                            </div>
+                    <form action="register.php" method="POST">
 
-                            <div class="mb-3">
-                            
+                        <div class="mb-3">
+
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+
                             <label for="name">E-mail</label>
-                            <input type="text" name="e-mail" id="e-mail" class="form-control">
+                            <input type="text" name="email" id="email" class="form-control">
                         </div>
 
 
-                                       
-                    <div class="mb-3">
-                            
+
+                        <div class="mb-3">
+
                             <label for="username">Name</label>
                             <input type="text" name="username" id="username" class="form-control">
                         </div>
@@ -68,7 +80,7 @@ if (isset($_POST["login"])) {
                             <input type="password" name="password" id="password" class="form-control">
                         </div>
 
-                        <button type="submit" name="login" class="btn btn-primary">Register</button>
+                        <button type="submit" name="register" class="btn btn-primary">Register</button>
 
                     </form>
 
