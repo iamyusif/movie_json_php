@@ -44,7 +44,7 @@
     "movies": [
         {
             "id": 1,
-            "title": "Ring of Power",
+            "title": "Ring of Powers",
             "description": "The Ring of Power is a 1992 documentary film written and directed by Amenstop Productions. It is the first part of a two-part series detailing the use of occultic practices and symbols in Hollywood, the music industry, and modern society. The film begins with a warning that the film may be disturbing to some viewers, especially those under the age of 18. The film is narrated by the Christian minister Texe Marrs, who is also the author of the book of the same name. ",
             "image": "https:\/\/i0.wp.com\/www.artofvfx.com\/wp-content\/uploads\/2022\/08\/lord_of_the_rings_the_rings_of_power_ver52_xlg.jpg?ssl=1",
             "likes": 3,
@@ -70,7 +70,7 @@
             "url": "the-menu",
             "likes": 3,
             "comments": 3,
-            "active": false
+            "active": true
         }
     ],
     "categories": [

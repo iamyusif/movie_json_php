@@ -23,21 +23,22 @@ if (!empty($_GET['q'])) {
     <ul class="navbar-nav ml-auto">
       <?php if (isset($_COOKIE["auth"])): ?>
         <li class="nav-item">
+          <a class="nav-link" href="#">Hello,
+            <?php echo $_COOKIE["auth"]["username"]; ?>
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="create.php">Add Movie</a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link" href="logout.php">Logout</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Hello,
-            <?php echo $_COOKIE["auth"]["username"]; ?>
-          </a>
-        </li>
+        
 
         <?php if (getUSer($_COOKIE["auth"]["username"])["role"] == "admin"): ?>
           <li class="nav-item">
-            <a class="nav-link" href="admin.php">Admin</a>
+            <a class="nav-link" style="color: green;" href="admin.php">Admin panel</a>
           </li>
         <?php endif; ?>
 

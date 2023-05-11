@@ -46,7 +46,7 @@ function createUser(string $name, string $email, string $username, string $passw
 }
 
 
-function createNewMovie(string $title, string $description, string $image, string $url,int $views = 3, int $imdb = 3) // create movie in db.json file
+function createNewMovie(string $title, string $description, string $image, string $url, int $likes = 3, int $comments = 3) // create movie in db.json file
 {
     $movies = getData()["movies"];
     $movies[] = [
@@ -55,8 +55,9 @@ function createNewMovie(string $title, string $description, string $image, strin
         "description" => $description,
         "image" => $image,
         "url" => $url,
-        "views" => $views,
-        "imdb" => $imdb,
+        "likes" => 3,
+        "comments" => 3,
+
         "active" => false
     ];
 
@@ -68,5 +69,68 @@ function createNewMovie(string $title, string $description, string $image, strin
     fclose($myFile);
 
 }
+
+function getMovieById(int $id) // get movie by id from db.json file
+{
+    $movies = getData()["movies"];
+
+    foreach ($movies as $movie) {
+        if ($movie["id"] == $id) {
+            return $movie;
+        }
+    }
+    return null;
+}
+
+function editMovie(int $id, string $title, string $description, string $image, string $url,bool $active) // edit movie in db.json file
+{
+    $movies = getData()["movies"];
+
+    foreach ($movies as $key => $movie) {
+        if ($movie["id"] == $id) {
+            $movies[$key]["title"] = $title;
+            $movies[$key]["description"] = $description;
+            $movies[$key]["image"] = $image;
+            $movies[$key]["url"] = $url;
+            $movies[$key]["active"] = $active;
+
+
+            $data = getData();
+            $data["movies"] = $movies;
+
+            $myFile = fopen("db.json", "w") or die("Unable to open file!");
+            fwrite($myFile, json_encode($data, JSON_PRETTY_PRINT));
+            fclose($myFile);
+
+            break;
+        }
+    }
+
+
+}
+
+
+function deleteMovie(int $id) // delete movie from db.json file
+{
+    $movies = getData()["movies"];
+
+    foreach ($movies as $key => $movie) {
+        if ($movie["id"] == $id) {
+            unset($movies[$key]);
+
+            $data = getData();
+            $data["movies"] = $movies;
+
+            $myFile = fopen("db.json", "w") or die("Unable to open file!");
+            fwrite($myFile, json_encode($data, JSON_PRETTY_PRINT));
+            fclose($myFile);
+
+            break;
+        }
+    }
+}
+
+
+
 
 ?>

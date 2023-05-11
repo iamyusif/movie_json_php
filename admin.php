@@ -50,15 +50,9 @@ require "libs/func.php";
                                     <td class="text-center"><i class="fa-solid fa-xmark"></i></td>
                                 <?php endif; ?>
                                 <td class="text-center">
-                                    <a href="edit.php?id=<?php echo $movie["id"]; ?>" class="btn btn-sm btn-warning">Edit</a>
-                                    <a href="delete.php?id=<?php echo $movie["id"]; ?>" class="btn btn-sm btn-danger">Delete</a>
-                                    <?php if ($movie["active"]): ?>
-                                        <a href="deactive.php?id=<?php echo $movie["id"]; ?>"
-                                            class="btn btn-sm btn-secondary">Deactive</a>
-                                    <?php else: ?>
-                                        <a href="active.php?id=<?php echo $movie["id"]; ?>"
-                                            class="btn btn-sm btn-success">Active</a>
-                                    <?php endif; ?>
+                                    <a href="admin-edit.php?id=<?php echo $movie["id"]; ?>" class="btn btn-sm btn-warning">Edit</a>
+                                    <a href="admin-delete.php?id=<?php echo $movie["id"]; ?>" class="btn btn-sm btn-danger">Delete</a>
+
 
                                 </td>
                             </tr>
